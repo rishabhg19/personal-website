@@ -1,0 +1,33 @@
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column 
+{
+    flex-direction: column;
+    float: left;
+    width: 20%;
+    padding: 0;
+    
+    img
+    {
+        width: 80%;
+        height: 80%;
+        object-fit: scale-down;
+        z-index: 1;
+    }
+
+}
+
+.app__profiles
+{
+  .p-text
+  {
+    font-size: large;
+  }
+}
+
+/* Clear floats after image containers */
+.row::after 
+{
+  content: "";
+  clear: both;
+  display: table;
+}

@@ -1,0 +1,177 @@
+$link-color: #4478A6;
+$hover-color: darken($link-color, 20%);
+$visited-color: lighten($link-color, 20%);
+
+.app__work-filter
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: 0.5rem 0 1rem;
+
+    .app__work-filter-item
+    {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        color:  #000;
+        font-weight: 800;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 0.5rem;
+    
+        &:hover 
+        {
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+
+        @media screen and (min-width: 2000px)
+        {
+            padding: 1rem 2rem;
+            border-radius: 0.85rem;
+        }
+    }
+
+    .item-active
+    {
+        background-color: var(--secondary-color);
+        color: #fff;
+    }
+}
+
+.sub-text
+{
+    padding: 1rem;
+}
+
+.app__work-img
+{
+    flex: 0.75;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 60%;
+
+
+    position: relative;
+
+    img
+    {
+        padding: 1rem;
+        width: 400px;
+        height: 100%;
+        border-radius: 0.5rem;
+        @media screen and (max-width: 900px)
+        {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    @media screen and (min-width: 2000px)
+    {
+        height: 300px;
+    }
+
+    
+}
+
+.app__work-content
+{
+
+    display: flex;
+    padding: 0.5rem;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+
+    h1
+    {
+        font-size: medium;
+        align-items: center;
+        margin-top: 1rem;
+        line-height: 1.5;
+    }
+    h4
+    {
+        font-size: medium;
+        font-weight: 1.5;
+        @media screen and (max-width: 900px)
+        {
+            font-size: small;
+        }
+    }
+
+    .p-text
+    {
+        font-size: medium;
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 0;
+        margin-right: 0;
+
+        @media screen and (max-width: 900px)
+        {
+            font-size: small;
+        }
+        
+
+    }
+    
+    .github
+    {
+        font-size: medium;
+        a
+        {
+            color: $link-color;
+            text-decoration: none;
+        
+            &:hover
+            {
+                color: $hover-color;
+                border-bottom: 1px solid $hover-color;
+            }
+        
+            &:visited  
+            {
+                color: $visited-color;
+                border-color: $visited-color;
+            }
+            @media screen and (max-width: 900px)
+            {
+                font-size: small;
+            }
+        }
+        img
+        {
+            display: none;
+            @media screen and (max-width: 900px)
+            {
+                width: 320px;
+
+                align-items: center;
+                display: inline;
+            }
+        }
+        @media screen and (max-width: 400px)
+        {
+            font-size: small;
+        }
+        
+    }
+    @media screen and (max-width: 400px)
+    {
+        font-size: small;
+        width: 100%;
+    }
+
+}
+
